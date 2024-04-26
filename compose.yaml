@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  network-netty:
+    image: netty
+    container_name: netty
+    volumes:
+      - ./locust:/opt/locust # Locust files
+    ports:
+      - "8089:8089" # Locust Web UI
+
+## Uncomment the following lines to enable network
+#    networks:
+#      - net1
+#      - net2
+
+#networks:
+#  net1:
+#    driver: bridge
+#  net2:
+#    driver: bridge
